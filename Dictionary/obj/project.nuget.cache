@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "IHglrn7QJcZSGRQNtYuyNKQzA6WfasizIj8Y7neGkYff7rHH3QsSIyN3oXtUZBFPW/U5zfbRQQoTOrJG54NehQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bella\\OneDrive\\Área de Trabalho\\Top Coders\\POO 2\\Dictionary\\Dictionary\\Dictionary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bella\\.nuget\\packages\\sharprompt\\2.4.3\\sharprompt.2.4.3.nupkg.sha512",
+    "C:\\Users\\bella\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
