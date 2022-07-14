@@ -4,14 +4,17 @@
     {
         public static void Main()
         {
-            var dictionary = new Dictionary<string, string>();
+            var dictionary = new Dictionary<string, string>(StringComparer.InvariantCultureIgnoreCase);
 
+            // Não implementa injeção de dependência (ainda não revisei essa parte)
             IRepository repository = new Repository();
-            IMyDictionary myDictionary = new MyDictionary(repository);
+            IWildcardsForbider wildcardsForbider = new WildcardsForbider();
+            IMyDictionary myDictionary = new MyDictionary(repository, wildcardsForbider);
             IInputValidator inputValidator = new InputValidator();
 
             var dic = repository.Load(dictionary);
 
+            // Não implementa Open-Closed Principle (OCP) =(
             do
             {
                 Console.Clear();

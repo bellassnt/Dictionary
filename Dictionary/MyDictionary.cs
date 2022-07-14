@@ -6,10 +6,12 @@
         private string? Meaning { get; set; }
 
         private readonly IRepository? _repository;
+        private readonly IWildcardsForbider? _wildcardsForbider;
 
-        public MyDictionary(IRepository repository)
+        public MyDictionary(IRepository repository, IWildcardsForbider wildcardsForbider)
         {
             _repository = repository;
+            _wildcardsForbider = wildcardsForbider;
         }
 
         public void Add(Dictionary<string, string> dictionary, string word, string meaning)
@@ -22,16 +24,25 @@
 
         public void Search(Dictionary<string, string> dictionary, string word)
         {
-            if (!dictionary.TryGetValue(word, out _))
-                Console.Write("\nNão há correspondência exata para essa busca.\n");
+            if (!_wildcardsForbider!.ForbidWildcards(word))
+            {
+                Console.WriteLine("\nA busca deve conter apenas letras e/ou espaços vazios (no caso de verbos frasais).");
+                return;
+            }
 
             Console.WriteLine();
 
+            int i = 0;
             foreach (var entry in dictionary)
             {
                 if (entry.Key.Contains(word, StringComparison.InvariantCultureIgnoreCase))
-                    Console.WriteLine($"{entry.Key}: {entry.Value}.");                
+                {
+                    Console.WriteLine($"{entry.Key}: {entry.Value}.");
+                    i++;
+                }                    
             }
+
+            if (i == 0) Console.WriteLine("Não há correspondência para essa busca.");
         }
     }
 }
