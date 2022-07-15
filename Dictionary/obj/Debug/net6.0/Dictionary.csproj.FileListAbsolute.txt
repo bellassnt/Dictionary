@@ -16,3 +16,5 @@ C:\Users\bella\OneDrive\Área de Trabalho\Top Coders\POO 2\Dictionary\Dictionary
 C:\Users\bella\OneDrive\Área de Trabalho\Top Coders\POO 2\Dictionary\Dictionary\bin\Debug\net6.0\Sharprompt.dll
 C:\Users\bella\OneDrive\Área de Trabalho\Top Coders\POO 2\Dictionary\Dictionary\bin\Debug\net6.0\ja\Sharprompt.resources.dll
 C:\Users\bella\OneDrive\Área de Trabalho\Top Coders\POO 2\Dictionary\Dictionary\obj\Debug\net6.0\Dictionary.csproj.CopyComplete
+C:\Users\bella\OneDrive\Área de Trabalho\Top Coders\POO 2\Dictionary\Dictionary\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\bella\OneDrive\Área de Trabalho\Top Coders\POO 2\Dictionary\Dictionary\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
